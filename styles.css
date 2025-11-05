@@ -1,0 +1,71 @@
+/* Basic reset and tokens */
+:root{
+  --bg:#f6f7fb;
+  --side:#ffffff;
+  --muted:#9aa4b2;
+  --accent:#0B69FF;
+  --dark:#111827;
+  --card:#ffffff;
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(17,24,39,0.06);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;background:var(--bg);color:var(--dark);font-size:14px}
+.app{display:flex;min-height:100vh}
+
+/* Sidebar */
+.sidebar{width:260px;padding:28px 20px;background:linear-gradient(180deg,#fff 0%, #fbfdff 100%);border-right:1px solid rgba(15,23,42,0.03);}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{flex-shrink:0}
+.brand-text .title{font-weight:700;color:var(--accent)}
+.brand-text .role{font-size:12px;color:var(--muted);margin-top:4px}
+
+.nav{margin-top:28px;display:flex;flex-direction:column;gap:6px}
+.nav-item{padding:12px 14px;border-radius:8px;color:#334155;text-decoration:none}
+.nav-item:hover{background:rgba(11,105,255,0.06);color:var(--accent)}
+.nav-item.active{background:rgba(11,105,255,0.12);color:var(--accent);font-weight:600}
+
+/* Main area */
+.main{flex:1;padding:22px 32px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.search input{width:520px;max-width:70vw;padding:10px 14px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);background:#fff}
+.profile{display:flex;align-items:center;gap:12px}
+.profile .username{color:var(--muted);font-size:13px}
+.avatar{width:36px;height:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+
+/* Stats */
+.stats{display:flex;gap:18px;margin-bottom:26px}
+.stat-card{flex:1;background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--shadow);min-height:86px;display:flex;flex-direction:column;justify-content:center}
+.stat-number{font-size:20px;font-weight:700;color:var(--accent)}
+.stat-label{color:var(--muted);margin-top:6px}
+.stat-sub{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* Users list */
+.users{display:flex;gap:18px}
+.user-card{background:var(--card);border-radius:12px;display:flex;justify-content:space-between;padding:18px;min-width:360px;box-shadow:var(--shadow);align-items:center}
+.user-left{display:flex;gap:14px;align-items:flex-start}
+.avatar-circle{width:60px;height:60px;border-radius:50%;background:#FF6B2C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.user-info{max-width:560px}
+.user-name{font-weight:600}
+.user-role{font-size:13px;color:var(--muted);margin-top:6px}
+.badges{margin-top:8px;display:flex;gap:8px}
+.badge{background:#eef6ff;color:var(--accent);padding:6px 10px;border-radius:999px;font-size:12px}
+.badge.outline{background:#071233;color:#fff;padding:6px 10px}
+.contact{list-style:none;padding:0;margin:10px 0 0 0;color:var(--muted)}
+.contact li{margin:6px 0}
+
+.user-right{display:flex;align-items:center;gap:12px}
+.user-stats{display:flex;gap:18px}
+.user-stats .us{font-weight:700;text-align:center}
+.user-stats .us span{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.more{font-size:22px;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .sidebar{display:none}
+  .search input{max-width:55vw}
+  .app{flex-direction:column}
+  .stats{flex-direction:column}
+}

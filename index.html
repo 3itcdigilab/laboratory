@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProjectHub — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <!-- inline SVG logo -->
+        <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="100" height="100" rx="18" fill="#0B69FF" />
+          <path d="M22 68 L46 36 L74 36 L78 42 L52 42 L30 68 Z" fill="#fff" />
+        </svg>
+        <div class="brand-text">
+          <div class="title">ProjectHub</div>
+          <div class="role">Admin</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-item" href="#">Dashboard</a>
+        <a class="nav-item" href="#">Proyek</a>
+        <a class="nav-item" href="#">Task Board</a>
+        <a class="nav-item" href="#">Jadwal</a>
+        <a class="nav-item active" href="#">Tim & Users</a>
+      </nav>
+
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search">
+          <input placeholder="Cari proyek, task, atau anggota tim..." />
+        </div>
+        <div class="profile">
+          <div class="username">tubagus</div>
+          <div class="avatar">T</div>
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="stat-card"> 
+          <div class="stat-number">0</div>
+          <div class="stat-label">Proyek Aktif</div>
+          <div class="stat-sub">0 Task Selesai</div>
+        </div>
+        <div class="stat-card"> 
+          <div class="stat-number">0</div>
+          <div class="stat-label">Proyek Aktif</div>
+          <div class="stat-sub">0 Task Selesai</div>
+        </div>
+        <div class="stat-card"> 
+          <div class="stat-number">0</div>
+          <div class="stat-label">Proyek Aktif</div>
+          <div class="stat-sub">0 Task Selesai</div>
+        </div>
+        <div class="stat-card"> 
+          <div class="stat-number">0</div>
+          <div class="stat-label">Proyek Aktif</div>
+          <div class="stat-sub">0 Task Selesai</div>
+        </div>
+      </section>
+
+      <section class="users">
+        <div class="user-card">
+          <div class="user-left">
+            <div class="avatar-circle">TA</div>
+            <div class="user-info">
+              <div class="user-name">Tubagus Aria Feransha Putra Adam</div>
+              <div class="user-role">Mentor</div>
+              <div class="badges">
+                <span class="badge">Engineering</span>
+                <span class="badge outline">Admin</span>
+              </div>
+
+              <ul class="contact">
+                <li>✉️ tubagusaria31@gmail.com</li>
+                <li>📞 087780092090</li>
+                <li>🔗 @tubagus</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="user-right">
+            <div class="user-stats">
+              <div class="us">0<br><span>Proyek Aktif</span></div>
+              <div class="us">0<br><span>Task Selesai</span></div>
+            </div>
+            <div class="more">⋯</div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
